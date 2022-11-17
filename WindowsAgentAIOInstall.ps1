@@ -93,6 +93,7 @@ key =  'keyreg'
 relay-server = 'wanipreg'
 api-server = 'https://wanipreg'
 enable-audio = 'N'
+direct-server = 'Y'
 "@
 
 If (!(Test-Path $env:AppData\RustDesk\config\RustDesk2.toml)) {
