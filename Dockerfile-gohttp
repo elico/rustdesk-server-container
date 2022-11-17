@@ -1,0 +1,7 @@
+FROM golang:alpine
+
+RUN apk update && apk add upx
+
+WORKDIR /build 
+
+CMD ["/bin/sh", "/build/build-gohttp.sh"]
