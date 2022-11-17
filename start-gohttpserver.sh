@@ -14,7 +14,7 @@ if [ -f "/admin_user" ];then
 	ADMIN_USER=$(head -1 /admin_user)
 fi
 
-if [ -f "/admin_token" ];then
+if [ -f "/admin_pass" ];then
 	ADMIN_TOKEN=$(head -1 /admin_pass)
 fi
 
