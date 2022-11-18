@@ -93,6 +93,7 @@ key = 'keyreg'
 custom-rendezvous-server = 'wanipreg'
 api-server = 'https://wanipreg'
 relay-server = 'wanipreg'
+direct-server = 'Y'
 EOF
 )"
 echo "${rustdesktoml2b}" | sudo tee /root/.config/rustdesk/RustDesk2.toml > /dev/null
