@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  rustdesk-server:
+    container_name: rustdesk-server
+    ports:
+      - 21115:21115
+      - 21116:21116
+      - 21116:21116/udp
+      - 21117:21117
+      - 21118:21118
+      - 21119:21119
+      - 8080:8080
+    image: elicro/rustdesk-server:latest
+    environment:
+      - TZ=Asia/Jerusalem
+      - IP=172.20.0.91
+      - DOMAIN=172.20.0.91
+      - RELAY=172.20.0.91
+      - HTTP_ADMIN_USER=admin
+      - HTTP_ADMIN_PASS=b13a7be1-9d8a-4c61-bda6-9aae0cedfa85
+      - HTTP_PORT=8080
+      - ENCRYPTED_ONLY=0
+    volumes:
+      - rustdesk_server_data:/data
+      - rustdesk_server_public_html:/public
+    restart: unless-stopped
+
+volumes:
+  rustdesk_server_data:
+  rustdesk_server_public_html:
